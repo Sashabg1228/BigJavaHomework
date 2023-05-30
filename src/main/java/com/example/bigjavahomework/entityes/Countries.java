@@ -1,47 +1,21 @@
 package com.example.bigjavahomework.entityes;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Data;
+
 
 @Entity
+@Table(name = "countries")
+@Data
 public class Countries {
     @Id
+    @Column(name = "code", nullable = false, columnDefinition = "VARCHAR(2)")
     private String code;
 
-    @Column
+    @Column(name = "name", nullable = false, columnDefinition = "VARCHAR(56)")
     private String name;
-    @Column
+    @Column(name = "location", nullable = false, columnDefinition = "BOOLEAN")
     private Boolean location;
-    @Column
+    @Column(name = "allowed", nullable = false, columnDefinition = "BOOLEAN")
     private Boolean allowed;
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Boolean getLocation() {
-        return location;
-    }
-    public void setLocation(Boolean location) {
-        this.location = location;
-    }
-
-    public Boolean getAllowed() {
-        return allowed;
-    }
-    public void setAllowed(Boolean allowed) {
-        this.allowed = allowed;
-    }
 }
