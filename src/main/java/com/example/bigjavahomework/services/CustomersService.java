@@ -1,12 +1,14 @@
 package com.example.bigjavahomework.services;
 
-import com.example.bigjavahomework.entityes.Customers;
+import com.example.bigjavahomework.resources.CustomersResource;
+
 import java.util.List;
+import java.util.Optional;
 
 public interface CustomersService {
-    List<Customers> allCustomers();
-    Customers findById(Integer id);
-    Customers save(Customers customer);
-    Customers update(Customers customer);
+    List<CustomersResource> getAll();
+    Optional<CustomersResource> getById(Integer id);
+    CustomersResource create(CustomersResource customerResource);
+    CustomersResource update(CustomersResource customerResource, Integer id);
     void deleteById(Integer id);
 }

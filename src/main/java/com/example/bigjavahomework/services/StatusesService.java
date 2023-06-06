@@ -1,12 +1,14 @@
 package com.example.bigjavahomework.services;
 
-import com.example.bigjavahomework.entityes.Statuses;
+import com.example.bigjavahomework.resources.StatusesResource;
+
 import java.util.List;
+import java.util.Optional;
 
 public interface StatusesService {
-    List<Statuses> allStatuses();
-    Statuses findByCode(String code);
-    Statuses save(Statuses status);
-    Statuses update(Statuses status);
+    List<StatusesResource> getAll();
+    Optional<StatusesResource> getByCode(String code);
+    StatusesResource create(StatusesResource statusResource);
+    StatusesResource update(StatusesResource statusResource, String code);
     void deleteByCode(String code);
 }

@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface CountriesService {
     List<CountriesResource> getAll();
     Optional<CountriesResource> getByCode(String code);
-    CountriesResource create(CountriesResource country);
-    CountriesResource update(CountriesResource country, String code);
+    CountriesResource create(CountriesResource countryResource);
+    CountriesResource update(CountriesResource countryResource, String code);
     void deleteById(String code);
 }
