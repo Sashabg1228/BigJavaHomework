@@ -1,4 +1,4 @@
-package com.example.bigjavahomework.controlers.resources;
+package com.example.bigjavahomework.resources;
 
 import com.example.bigjavahomework.entityes.Countries;
 import jakarta.annotation.Resource;

@@ -1,12 +1,14 @@
 package com.example.bigjavahomework.services;
 
-import com.example.bigjavahomework.entityes.Countries;
+import com.example.bigjavahomework.resources.CountriesResource;
+
 import java.util.List;
+import java.util.Optional;
 
 public interface CountriesService {
-    List<Countries> allCountries();
-    Countries findById(String code);
-    Countries save(Countries country);
-    Countries update(Countries country);
+    List<CountriesResource> getAll();
+    Optional<CountriesResource> getByCode(String code);
+    CountriesResource create(CountriesResource country);
+    CountriesResource update(CountriesResource country, String code);
     void deleteById(String code);
 }
